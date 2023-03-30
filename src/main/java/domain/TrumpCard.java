@@ -1,5 +1,6 @@
 package domain;
 
+import java.util.Collections;
 import java.util.List;
 
 public class TrumpCard {
@@ -9,4 +10,10 @@ public class TrumpCard {
     public TrumpCard(List<Card> cards) {
         this.cards = cards;
     }
+
+    public void shuffle() {
+        Collections.shuffle(cards);
+    }
+
+
 }
