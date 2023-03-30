@@ -14,4 +14,10 @@ public class TrumpCard {
         this.cards = new ArrayDeque<>(cards);
     }
 
+    public Card drawCard() {
+        if (cards.isEmpty()) {
+            throw new IllegalArgumentException("[ERROR] 뽑을 카드가 없습니다.");
+        }
+        return cards.pop();
+    }
 }
