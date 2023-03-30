@@ -2,6 +2,7 @@ package domain;
 
 import java.util.Arrays;
 import java.util.Objects;
+import java.util.stream.Stream;
 
 public enum Number {
     ACE("A"),
@@ -29,5 +30,9 @@ public enum Number {
                 .filter(number -> Objects.equals(number.name, name))
                 .findAny()
                 .orElseThrow(() -> new IllegalArgumentException("[ERROR] 올바른 트럼프 숫자가 아닙니다."));
+    }
+
+    public static Stream<Number> stream() {
+        return Arrays.stream(Number.values());
     }
 }
