@@ -21,4 +21,8 @@ public enum Symbol {
                 .findAny()
                 .orElseThrow(() -> new IllegalArgumentException("[ERROR] 올바른 트럼프 문양이 아닙니다."));
     }
+
+    public String getName() {
+        return name;
+    }
 }

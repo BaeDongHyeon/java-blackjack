@@ -35,4 +35,8 @@ public enum Number {
     public static Stream<Number> stream() {
         return Arrays.stream(Number.values());
     }
+
+    public String getName() {
+        return name;
+    }
 }
