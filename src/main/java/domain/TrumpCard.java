@@ -1,19 +1,17 @@
 package domain;
 
+import java.util.ArrayDeque;
 import java.util.Collections;
+import java.util.Deque;
 import java.util.List;
 
 public class TrumpCard {
 
-    private final List<Card> cards;
+    private final Deque<Card> cards;
 
     public TrumpCard(List<Card> cards) {
-        this.cards = cards;
-    }
-
-    public void shuffle() {
         Collections.shuffle(cards);
+        this.cards = new ArrayDeque<>(cards);
     }
-
 
 }
