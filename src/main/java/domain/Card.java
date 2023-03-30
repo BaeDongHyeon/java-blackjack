@@ -9,4 +9,16 @@ public class Card {
         this.symbol = symbol;
         this.number = number;
     }
+
+    public Symbol getSymbol() {
+        return symbol;
+    }
+
+    public Number getNumber() {
+        return number;
+    }
+
+    public String getCardName() {
+        return symbol.getName() + number.getName();
+    }
 }
