@@ -16,6 +16,13 @@ public class SymbolTest {
     }
 
     @Test
+    @DisplayName("공백이 포함되면 에러가 발생한다.")
+    void notSpaceSymbol() {
+        assertThatThrownBy(() -> of("스페 이드"))
+                .isInstanceOf(IllegalArgumentException.class);
+    }
+
+    @Test
     @DisplayName("올바른 문양을 입력하면 symbol이 반환된다.")
     void rightSymbol() {
         assertThat(of("클로버"))
