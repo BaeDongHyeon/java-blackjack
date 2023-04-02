@@ -1,13 +1,12 @@
-package domain;
+package blackjack.domain;
 
+import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.*;
 
-public class CardTest {
-
-    private static final String CARD_NAME = "클로버A";
+class CardTest {
 
     @Test
     @DisplayName("문양과 숫자가 있으면 카드가 생성 된다.")
@@ -20,6 +19,9 @@ public class CardTest {
         Card card = new Card(symbol, number);
 
         // then
-        assertThat(card.getCardName()).isEqualTo(CARD_NAME);
+        assertThat(card.getSymbol())
+                .isEqualTo(Symbol.CLOVER);
+        assertThat(card.getNumber())
+                .isEqualTo(Number.ACE);
     }
 }

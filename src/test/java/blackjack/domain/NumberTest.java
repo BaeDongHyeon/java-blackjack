@@ -1,13 +1,13 @@
-package domain;
+package blackjack.domain;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static domain.Number.*;
+import static blackjack.domain.Number.*;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
-public class NumberTest {
+class NumberTest {
 
     @Test
     @DisplayName("올바른 숫자가 아니면 에러가 발생한다.")

@@ -1,4 +1,4 @@
-package view;
+package blackjack.view;
 
 public class BlackjackView {
 
